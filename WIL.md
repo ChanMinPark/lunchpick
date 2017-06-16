@@ -24,3 +24,21 @@ npm start
   or
 yarn start
 ```
+
+
+## React.PropTypes
+propTypes는 react v16부터 별도 패키지로 분리되었다. (prop-types 패키지)  
+cdn : https://unpkg.com/prop-types/prop-types.min.js  
+그래서 React.PropTypes로 안쓰고 그냥 PropTypes로 쓴다.  
+
+```
+import PropTypes from 'prop-types';
+
+...
+
+Codelab.propTypes = {
+  value : PropTypes.string,
+  secondValue: PropTypes.number,
+  thirdValue: PropTypes.any.isRequired
+}
+```
