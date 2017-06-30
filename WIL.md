@@ -85,3 +85,5 @@ react-hot-loader를 babel-loader 앞에 작성해줘야하고, babel-loader의 q
 라고 작성한다.  
 
 이렇게 react-hot-loader 패키지를 이용하면 실시간으로 페이지 새로고침없이 내용 변경이 반영되면서 state도 유지할 수 있다.  
+
+참고로 create-react-app 패키지를 이용해서 react 프로젝트를 만들면 자동으로 HMR이 적용되어 있다.  
