@@ -42,3 +42,46 @@ Codelab.propTypes = {
   thirdValue: PropTypes.any.isRequired
 }
 ```
+
+
+## webpack-dev-server의 HMR(Hot Module Replacement)
+HMR은 내용이 변경된 모듈을 페이지 새로고침 없이 런타임에서 업데이트 하는 기능이다.  
+webpack-dev-server는 기본적으로 모듈 내용이 변경되면 웹페이지가 새로고침 되면서 변경사항을 반영한다.  
+그러나, 웹페이지 새로고침 없이 내용만 수정하는 방법이 있다.  
+내용이 수정되는 모듈 js 파일 하단에 아래 코드를 추가한다.  
+```javascript
+if(module.hot) {
+  module.hot.accept();
+}
+```
+
+근데 또 React에서 위 방식의 문제는 내용이 변경될 때 state 변수의 값을 유지하지 못한다는 것이다.  
+
+이 문제를 해결할 수 있는 방법이 ```react-hot-loader``` 패키지를 이용하는 것이다.  
+패키지를 npm으로 설치하고 위의 if문 사용하지 않은 상태에서,  
+webpack.config.js의 loaders 설정을 조금 수정한다.  
+```js
+module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                loaders: ['react-hot-loader', 'babel-loader?'+JSON.stringify({
+                    cacheDirectory: true,
+                    presets: ['es2015', 'react']
+                })],
+                exclude: /node_modules/
+            }
+        ]
+    },
+```
+react-hot-loader를 babel-loader 앞에 작성해줘야하고, babel-loader의 query 내용을 적용시키기 위해서  
+'babel-loader'라고 쓰지 않고  
+```js
+'babel-loader?'+JSON.stringify({
+                    cacheDirectory: true,
+                    presets: ['es2015', 'react']
+                })
+```
+라고 작성한다.  
+
+이렇게 react-hot-loader 패키지를 이용하면 실시간으로 페이지 새로고침없이 내용 변경이 반영되면서 state도 유지할 수 있다.  
