@@ -87,3 +87,21 @@ react-hot-loader를 babel-loader 앞에 작성해줘야하고, babel-loader의 q
 이렇게 react-hot-loader 패키지를 이용하면 실시간으로 페이지 새로고침없이 내용 변경이 반영되면서 state도 유지할 수 있다.  
 
 참고로 create-react-app 패키지를 이용해서 react 프로젝트를 만들면 자동으로 HMR이 적용되어 있다.  
+
+
+
+## React Component에서의 onClick 속성 설정
+React Component에서는 onClick과 같은 이벤트 속성을 사용할 수 없다.  
+이러한 속성은 네이티브 DOM(ex. div, input, h1 등)에만 적용된다.  
+왜냐하면,  
+```
+<Component onClick="~~~" />
+```
+처럼 작성했을 때 onClick이 이벤트 속성이 아니라 props로 전달되기 때문이다.  
+
+그래서 onClick 이벤트 속성을 부여하고 싶다면 Component를 정의한 곳에 가서  
+div등 네이티브 DOM에  
+```
+onClick={this.props.onClick}
+```
+으로 적용해줘야한다.  
