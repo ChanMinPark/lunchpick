@@ -105,3 +105,16 @@ div등 네이티브 DOM에
 onClick={this.props.onClick}
 ```
 으로 적용해줘야한다.  
+
+
+## React Component의 render 내에서 매개변수가 있는 함수 사용하기
+render 내에서 함수를 쓸때 아래처럼 괄호를 사용하면 안된다.  
+무한 반복 수행된다.  
+```
+onClick={this.handleClick(i)}
+```
+
+매개변수를 넘기고 싶다면 arrow function(화살표 함수)을 사용하면 된다.  
+```
+onClick={() => this.handleClick(i)}
+```
