@@ -118,3 +118,6 @@ onClick={this.handleClick(i)}
 ```
 onClick={() => this.handleClick(i)}
 ```
+
+## Git test
+변경사항이 생기면 커밋 and 푸쉬 합니다.
