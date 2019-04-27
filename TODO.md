@@ -27,3 +27,7 @@
 - AWS Amplify  
 - AWS(Serverless Back-end - Lambda, API Gateway, DynamoDB)  
 - AWS(Hosting - S3, CloudFront, Route53) - Pre-render 방식으로 '서비스 소개'부분은 SEO를 고려함.
+
+## Development TODO list  
+- 회원가입 및 로그인 페이지 구현  
+- AWS Amplify 설치 및 Auth 기능 구현  
