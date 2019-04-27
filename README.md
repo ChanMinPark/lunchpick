@@ -1,21 +1,22 @@
 # lunchpick
-점심 메뉴를 랜덤으로 골라주는 서비스
 
-## 목표
-### 1차 목표
-- 목록을 사용자가 직접 입력하게 함.
-    - 목록은 + 버튼으로 계속 추가할 수 있게 함.
-- '점심 고르기' 버튼을 누르면 목록 중에 1개가 선택 됨.
-    - 선택된 메뉴는 화면에 오버레이되어 나타나게 함.
-    - 배경은 까만색 반투명하게, 상자만 불투명하게.
+> LunchPick project made by ChanMin Park.
 
-### 2차 목표
-- 로그인기능 추가.
-    - 페이스북 로그인.
-- 사용자가 식당들을 저장할 수 있게 함.
-- 식당 추가 방법
-    - 검색으로 지도에서 바로 저장.
-    - 지도에서 위치 선택 후 식당 이름 직접 입력으로 저장.
-- 저장된 식당 목록을 지도에 표시.
-- 지도가 로딩 될때 보여지는 위치는 마지막으로 입력된 식당 위치(일단 GPS 안씀).
-- 식당이 랜덤으로 선택되면 지도에 위치가 표시됨.
+## Build Setup
+
+``` bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
