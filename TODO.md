@@ -31,3 +31,5 @@
 ## Development TODO list  
 - 회원가입 및 로그인 페이지 구현  
 - AWS Amplify 설치 및 Auth 기능 구현  
+    - 고민사항: Amplify cli로 리소스들을 관리할때, 그 정보를 어떻게 설정 파일에 연결시킬까?  
+    - 일반적인 project가 아니고 nuxt.js 프레임워크이기 때문에 설정파일의 위치(plugins 하위가 될듯)를 어떻게 알게할까?  
