@@ -6,8 +6,9 @@
     </section>
     
     <!-- Input Group -->
-    <section>
+    <section class="form-group">
       <!-- ID -->
+      <input type="text" class="form-control" placeholder="E-mail">
       <!-- PW -->
     </section>
 
@@ -18,7 +19,7 @@
 
     <!-- Social Login -->
     <section>
-      
+
     </section>
   </div>
 </template>
